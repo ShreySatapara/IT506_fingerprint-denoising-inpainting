@@ -27,8 +27,6 @@ def custom_activation(x):
 
 smooth = 1.
 
-
-
 def get_unet(do=0, activation=ReLU):
     inputs = Input(input_shape+(3,))
     conv1 = Dropout(do)(activation()(Conv2D(32, (3, 3), padding='same')(inputs)))
